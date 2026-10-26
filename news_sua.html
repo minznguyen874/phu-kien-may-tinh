@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .m1 {
+        background-color: darkseagreen;
+        border-radius: 10px;
+    }
+
+    .col-md-4 {
+        padding: 5px;
+    }
+
+    .col-md-3 {
+        padding: 5px;
+    }
+
+    .m2 {
+        background-color: rgb(140, 167, 224);
+        border-radius: 10px;
+    }
+
+    .TL img {
+        height: 100%;
+    }
+
+    .new-banner img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .new-text {
+        width: 20%;
+        height: 70px;
+    }
+
+    .new-text:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    .share {
+        margin-left: 20px;
+        width: 260px;
+    }
+
+    .share h3 {
+        border-bottom: 1px solid #080808;
+    }
+
+    .share p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        border-bottom: 1px solid #ddd;
+        padding: 8px 0;
+    }
+
+    .share p img {
+        width: 70px;
+        height: 35px;
+        object-fit: cover;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        gap: 15px;
+    }
+
+    .box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: white;
+        box-shadow: 0 2px 8px #ddd;
+    }
+
+    .box img {
+        width: 60px;
+        margin-right: 10px;
+    }
+
+    .box b {
+        font-size: 14px;
+        color: #541328;
+    }
+
+    .box p {
+        margin: 5px 0 0;
+        font-size: 12px;
+    }
+
+    body {
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    .cha {
+        position: relative;
+    }
+
+    .con {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+
+    .cao1 {
+        height: 100px;
+    }
+
+    .cao2 {
+        height: 200px;
+    }
+
+    .cao3 {
+        height: 500px;
+    }
+
+    table img {
+        width: 100px;
+    }
+
+    .section-title {
+        border-left: 5px solid #0d6efd;
+        padding-left: 10px;
+        margin: 30px 0 20px;
+    }
+
+    .sp-box {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        height: 100%;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .sp-box:hover {
+        border-color: #e91e8c;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-4px);
+    }
+
+    footer.cao1 {
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    /* Thẻ sản phẩm: ảnh và phần chữ nằm gọn trong khung */
+    .sp {
+        box-sizing: border-box;
+        border: 1px solid gray;
+        height: 282px;
+        border-radius: 12px;
+        background-color: burlywood;
+        padding: 8px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    .sp img {
+        display: block;
+        width: 100%;
+        height: 150px !important;
+        min-height: 150px;
+        object-fit: contain !important;
+        border-radius: 6px;
+        margin-bottom: 4px;
+    }
+
+    .sp .text-muted,
+    .sp .text-success {
+        line-height: 1.25;
+        margin: 3px 0;
+    }
+
+    .sp h6 {
+        font-size: 14px;
+        line-height: 1.25;
+        margin: 4px 0;
+    }
+
+    /* Tên sản phẩm dành sẵn hai dòng để giá luôn thẳng hàng */
+    .sp h6:nth-of-type(1) {
+        min-height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sp h6:last-child {
+        margin-top: auto;
+        padding-top: 3px;
+        color: #e91e8c;
+    }
+
+    .col {
+        width: 20%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 992px) {
+        .col {
+            width: 33.3333%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .col {
+            width: 50%;
+        }
+
+        .sp {
+            height: 282px;
+        }
+    }
+
+    .post img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-text {
+        width: 20%;
+
+    }
+
+    .post img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-banner img {
+        width: 100%;
+        height: 380px;
+    }
+
+    .new-text {
+        width: 20%;
+
+    }
+</style>
+
+<body>
+    <div class="container-fuild p-0">
+        <header style="height:200px ;" class="bg-info text-light d-flex align-items-center position-relative">
+            <img src="img/logo technology.png" style="height: 150px;">
+            <div class="fs-1 text-black justify-content-center position-absolute top-30 end-50">XIN CHÀO QUÝ KHÁCH</div>
+        </header>
+    </div>
+    <div style="width: 1200px; margin: 0 auto; padding: 0;">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Liên Hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Giỏ Hàng </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Đăng Nhập</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" style="min-width: 300px;">
+                        <input class="form-control me-2" type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="btn btn-outline-light" type="button">🔍 Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-md-9" style="height:420px ;">
+                <div class="new-banner">
+                    <img src="img/banner350px.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="new-text text-center p-2">
+                        <h6>Window 11pro</h6>
+                        <h6>offline 2026</h6>
+                    </div>
+                    <div class="new-text text-center p-2">
+                        <h6>Săn Ngay Bản Quyền</h6>
+                        <h6>Offline Chỉ 499k</h6>
+                    </div>
+                    <div class="new-text text-center p-2">
+                        <h6>Sử Dụng Window</h6>
+                        <h6>Cách Với Ổ Cứng SSD</h6>
+                    </div>
+                    <div class="new-text text-center p-2">
+                        <h6>Màn Hình Led</h6>
+                        <h6>55 inch</h6>
+                    </div>
+                    <div class="new-text text-center p-2">
+                        <h6>Âm Thanh Sống Động</h6>
+                        <h6>Full HD</h6>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3" style="height:400px ;">
+                <div class="share">
+                    <h3>Chia sẻ nổi bật</h3>
+                    <p><img src="img/annhnoibat1.jpg"> Cách chọn laptop phù hợp</p>
+                    <p><img src="img/annhnoibat2.jpg"> Top phụ kiện công nghệ</p>
+                    <p><img src="img/annhnoibat3.jpg"> Hướng dẫn sử dụng laptop</p>
+                    <p><img src="img/annhnoibat4.jpg"> Kinh nghiệm mua PC</p>
+                    <p><img src="img/annhnoibat5.jpg"> Công nghệ mới nhất</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    <div class="container">
+
+        <div class="box">
+            <img src="img/bieutuong1.png">
+            <div>
+                <b>Phần mềm bản quyền</b>
+                <p>100% từ nhà phát triển</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/bieutuong2.png">
+            <div>
+                <b>Update sản phẩm</b>
+                <p>Hỗ trợ update trọn đời</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/bieutuong3.png">
+            <div>
+                <b>Thêm mới sản phẩm</b>
+                <p>Liên tục hàng tháng</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img/bieutuong4.png">
+            <div>
+                <b>Đặt hàng, thanh toán</b>
+                <p>Linh hoạt, bảo mật</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style="max-width:1200px; margin:0 auto; padding:0 15px;">
+        <div class="row text-center">
+            <h2>Top items bán chạy</h2>
+            <h5>Tổng hợp những sản phẩm bán chạy nhất trong tháng</h5>
+        </div>
+
+        <div class="row">
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images1.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">07/11/2026</div>
+                    <div class="text-success">PC GAMING</div>
+                    <h6>PC Gaming Core i5 RTX 3050</h6>
+                    <h6 style="color:#e91e8c;">15.000.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images8.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">20/11/2026</div>
+                    <div class="text-success">MÀN HÌNH</div>
+                    <h6>Màn hình 24 inch 144Hz</h6>
+                    <h6 style="color:#e91e8c;">3.500.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images15.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">17/11/2026</div>
+                    <div class="text-success">CHUỘT</div>
+                    <h6>Chuột gaming RGB</h6>
+                    <h6 style="color:#e91e8c;">450.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images20.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">18/07/2026</div>
+                    <div class="text-success">BÀN PHÍM</div>
+                    <h6>Bàn phím cơ Blue Switch</h6>
+                    <h6 style="color:#e91e8c;">800.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images9.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">10/03/2026</div>
+                    <div class="text-success">MÀN HÌNH</div>
+                    <h6>màn hình amoled</h6>
+                    <h6 style="color:#e91e8c;">600.000₫</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images3.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">13/11/2026</div>
+                    <div class="text-success">PC GAMING</div>
+                    <h6>PC Gaming Core i7 RTX </h6>
+                    <h6 style="color:#e91e8c;">25.000.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images10.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">13/11/2026</div>
+                    <div class="text-success">MÀN HÌNH</div>
+                    <h6>Màn hình cong 27 inch</h6>
+                    <h6 style="color:#e91e8c;">5.200.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images18.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">04/11/2026</div>
+                    <div class="text-success">CHUỘT</div>
+                    <h6>Chuột không dây</h6>
+                    <h6 style="color:#e91e8c;">350.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images20.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">04/10/2026</div>
+                    <div class="text-success">BÀN PHÍM</div>
+                    <h6>Bàn phím cơ RGB</h6>
+                    <h6 style="color:#e91e8c;">1.200.000₫</h6>
+                </div>
+            </div>
+            <div class="col text-center p-2">
+                <div class="sp p-2">
+                    <img src="img/images15.jpg" alt="" class="w-100" style="height:150px; object-fit:cover;">
+                    <div class="text-muted">29/10/2026</div>
+                    <div class="text-success">CHUỘT</div>
+                    <h6>chuột gaming</h6>
+                    <h6 style="color:#e91e8c;">150.000₫</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid m1 mt-3 p-3">
+        <div style="max-width:1200px; margin:0 auto; padding: 15px;">
+            <footer>
+                <div class="row">
+                    <div class="col-md-3" style="height: 400px;">
+                        <h3>Thông tin khác</h3>
+                        <p>Tích điểm Quà tặng VIP</p>
+                        <p>Lịch sử mua hàng</p>
+                        <p>Bán hàng doanh nghiệp</p>
+                        <p>Đăng ký bán hàng CTV chiết khấu cao</p>
+                        <p>Tìm hiểu về mua trả chậm</p>
+                        <p>Chính sách bảo hành</p>
+                    </div>
+                    <div class="col-md-3" style="height: 400px;">
+                        <h3>Về công ty</h3>
+                        <p>Giới thiệu công ty</p>
+                        <p>Tuyển dụng</p>
+                        <p>Gửi góp ý, khiếu nại</p>
+                        <p>Tìm siêu thị (2.987 shop)</p>
+                    </div>
+                    <div class="col-md-3" style="height: 400px;">
+                        <h3>Tổng đài hỗ trợ</h3>
+                        <p>Gọi mua: 1900 232 460 (8:00 - 21:30)</p>
+                        <p>Khiếu nại: 1800.1062 (8:00 - 21:30)</p>
+                        <p>Bảo hành: 1900 232 464 (8:00 - 21:00)</p>
+                    </div>
+                    <div class="col-md-3 p-5" style="height: 200px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.8777786312658!2d106.63146967575206!3d10.743901989402852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e794ceeb2e7%3A0x60feca181d4f1dd3!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEtpbmggdOG6vyBL4bu5IHRodeG6rXQgVHAuSENN!5e0!3m2!1svi!2s!4v1789953716386!5m2!1svi!2s"
+                            width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

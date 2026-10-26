@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đồ Dùng Công Nghệ TL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  .m1 {
+    background-color:rgb(67, 27, 171);
+    border-radius: 10px;
+  }
+
+  .col-md-4 {
+    padding: 5px;
+  }
+
+  .col-md-3 {
+    padding: 5px;
+  }
+
+  .best-seller-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .best-seller-row .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-seller-row .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .best-seller-row .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .m2 {
+    background-color: rgb(140, 167, 224);
+    border-radius: 10px;
+  }
+</style>
+
+<body>
+  <div class="container-fuild p-0">
+    <header style="height:200px ;" class="bg-info text-light d-flex align-items-center position-relative">
+      <img src="img/logo technology.png" style="height: 150px;">
+      <div class="fs-1 text-black justify-content-center position-absolute top-30 end-50">XIN CHÀO QUÝ KHÁCH</div>
+    </header>
+  </div>
+  <div class="container p-0">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="javascript:void(0)"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/detail.html">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/news.html">Liên Hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Giỏ Hàng </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Đăng Nhập</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container my-3 m2 p-3">
+    <div class="row">
+      <div class="banner">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/banner4r1200px.png" alt="Los Angeles" class="d-block w-100" style="height: 400px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/banner5r1200px.png" alt="Chicago" class="d-block w-100" style="height: 400px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/banner6r1200px.png" alt="New York" class="d-block w-100" style="height: 400px;">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-3 m2 p-3">
+      <div class="row">
+        <h1>Sản Phẩm</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="img/ảnh phím cơ 1.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Bàn Phím</h4>
+              <p class="card-text">30.000.000đ</p>
+              <a href="#" class="btn btn-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="img/chuotgaming2.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Chuột Máy Tính</h4>
+              <p class="card-text">15.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="img/loa1.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Loa Gaming</h4>
+              <p class="card-text">60.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-3 m1 p-3">
+      <div class="row">
+        <div class="banner">
+          <img src="img/bannerngang.png" alt="TL Technology Banner">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <h1>Sản Phẩm bán chạy</h1>
+      </div>
+      <div class="row best-seller-row">
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/maychoigame.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Máy Chơi Game</h4>
+              <p class="card-text">45.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/chuotgaming2.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">45.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/loa2.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">60.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/banphim2.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">60.000.000</p>
+              <a href="#" class="btn btn-primary">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <div class="row">
+            <h1>SAN PHAM KHUYEN MAI</h1>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <img src="img/bannerdung2.png" alt="" style="height:620px; width:100%;">
+            </div>
+
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/banphim4.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">John Doe</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/CPU1.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">John Doe</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/combo1.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">combo 1</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/anhlaptop1.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">John Doe</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/maychoigame2.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">combo 2</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card text-center">
+                    <img class="card-img-top" src="img/headphone.png" alt="Card image" style="height:200px;">
+                    <div class="card-body">
+                      <h4 class="card-title">HeadPhone Pro</h4>
+                      <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                  </div>
+                </div>
+      </div> <!-- đóng khu vực sản phẩm khuyến mãi -->
+    </div> <!-- đóng khu vực sản phẩm bán chạy -->
+  </div> <!-- đóng khung nội dung chính -->
+
+  <footer class="site-footer">
+    <div class="footer-inner container-fluid">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h3>Thông tin khác</h3>
+          <p>Tích điểm Quà tặng VIP</p>
+          <p>Lịch sử mua hàng</p>
+          <p>Bán hàng doanh nghiệp</p>
+          <p>Đăng ký bán hàng CTV chiết khấu cao</p>
+          <p>Tìm hiểu về mua trả chậm</p>
+          <p>Chính sách bảo hành</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h3>Về công ty</h3>
+          <p>Giới thiệu công ty</p>
+          <p>Tuyển dụng</p>
+          <p>Gửi góp ý, khiếu nại</p>
+          <p>Tìm siêu thị (2.987 shop)</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h3>Tổng đài hỗ trợ</h3>
+          <p>Gọi mua: 1900 232 460 (8:00 - 21:30)</p>
+          <p>Khiếu nại: 1800.1062 (8:00 - 21:30)</p>
+          <p>Bảo hành: 1900 232 464 (8:00 - 21:00)</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.8777786312658!2d106.63146967575206!3d10.743901989402852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e794ceeb2e7%3A0x60feca181d4f1dd3!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEtpbmggdOG6vyBL4bu5IHRodeG6rXQgVHAuSENN!5e0!3m2!1svi!2s!4v1789953716386!5m2!1svi!2s"
+            width="100%" height="180" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ cửa hàng"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .site-footer {
+      width: 100%;
+      background-color: darkseagreen;
+      color: #174b2b;
+      padding: 28px 0;
+      margin-top: 24px;
+      box-sizing: border-box;
+    }
+    .site-footer .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .site-footer h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .site-footer p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+    .site-footer .footer-map iframe {
+      display: block;
+      border-radius: 6px;
+    }
+    @media (max-width: 576px) {
+      .site-footer .footer-inner { padding: 0 16px; }
+      .site-footer h3 { font-size: 20px; }
+    }
+  </style>
+
+
+
+
+</body>
+
+</html>
